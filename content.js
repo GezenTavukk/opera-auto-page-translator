@@ -1,13 +1,15 @@
 /**
  * Auto Page Translator Extension
- * v1.0.0
+ * v1.1.0
  */
 
 {
+    const userLang = navigator.language.split('-')[0];
+
     const CONFIG = {
-        translateURL: "https://translate.google.com/translate?sl=auto&tl=tr&u=",
+        translateURL: `https://translate.google.com/translate?sl=auto&tl=${userLang}&u=`,
         ui: {
-            text: "Sayfayı Türkçe'ye çevireyim mi?",
+            text: "Sayfayı çevireyim mi?",
             btnYes: "Çevir",
             btnNo: "Kapat",
             primaryColor: "#1a73e8",
